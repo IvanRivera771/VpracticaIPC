@@ -5,19 +5,31 @@
  */
 package com.mycompany.Armas;
 
+import com.mycompany.Vehiculos.Vehiculos;
+
 /**
  *
  * @author Ivan Rivera
  */
 public class Armas {
 
-    private  int nivelDanio;
+    private int nivelDanio;
     private String nombreArma;
     private int punteria;
     private int velocidad;
+    private int precioArma;
+    private int municion;
+
+    public int getPrecioArma() {
+        return precioArma;
+    }
+
+    public void setPrecioArma(int precioArma) {
+        this.precioArma = precioArma;
+    }
 
     public Armas() {
-    
+
     }
 
     public int getNivelDanio() {
@@ -52,5 +64,4 @@ public class Armas {
         this.velocidad = velocidad;
     }
 
-    
 }

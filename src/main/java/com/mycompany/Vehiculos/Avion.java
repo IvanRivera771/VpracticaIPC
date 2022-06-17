@@ -10,12 +10,14 @@ package com.mycompany.Vehiculos;
  * @author Ivan Rivera
  */
 public class Avion extends Vehiculos {
+    
 
     public Avion() {
         setNombre("F-22 Raptor");
         setAtaque(7);
         setDefensa(3);
         setPunteria(10);
+        setPrecioVehiculo(15);
         
     }
 

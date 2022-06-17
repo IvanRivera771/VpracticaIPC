@@ -10,13 +10,16 @@ package com.mycompany.Vehiculos;
  * @author Ivan Rivera
  */
 public class Tanque extends Vehiculos {
+    
+    
 
     public Tanque() {
 
-        setNombre("T-34");
+        setNombre("T-34 Caza");
         setAtaque(10);
         setDefensa(6);
         setPunteria(50);
+        setPrecioVehiculo(10);
 
     }
 

@@ -6,6 +6,7 @@
 package com.mycompany.DatosJugador;
 
 import com.mycompany.Vehiculos.Vehiculos;
+import com.sun.source.tree.ExpressionStatementTree;
 
 /**
  *
@@ -62,9 +63,10 @@ public class Jugador extends Personaje {
         setVehiculo(nuevaLista);
     }
 
-    /*public Vehiculos seleccionarVehiculo() {
+    public void restarOro(int cantOroGastado) {
 
-        return;
-    }*/
+        cantidadOro -= cantOroGastado;
+
+    }
 
 }

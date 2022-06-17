@@ -62,7 +62,7 @@ public class JframeVehiculos extends javax.swing.JFrame {
 
         jLabel6.setText("Puntería");
 
-        jLabel7.setText("Mark1");
+        jLabel7.setText("T-34 Caza");
 
         JLcantidadAtaque.setText("Ataque");
 

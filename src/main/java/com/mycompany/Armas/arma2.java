@@ -12,7 +12,7 @@ package com.mycompany.Armas;
 public class arma2  extends Armas{
     
     public arma2(){
-        setNombreArma("Arma2");
+        setNombreArma("Cohete");
         setNivelDanio(5);
         setPunteria(3);
         setVelocidad(4);

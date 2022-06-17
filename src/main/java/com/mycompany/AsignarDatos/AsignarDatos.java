@@ -4,7 +4,7 @@ package com.mycompany.AsignarDatos;
 import com.mycompany.Armas.Armas;
 import com.mycompany.Vehiculos.Vehiculos;
 import static com.mycompany.practicaipc.JFrameDatosJuego.JCBVehiculos;
-import static com.mycompany.practicaipc.JFrameDatosJuego.JLVehiculo;
+//import static com.mycompany.practicaipc.JFrameDatosJuego.JLVehiculo;
 //import static com.mycompany.practicaipc.JFrameDatosJuego.JLarma1;
 import static com.mycompany.practicaipc.JFrameDatosJuego.JLataque;
 import static com.mycompany.practicaipc.JFrameDatosJuego.JLdefensa;
@@ -38,7 +38,7 @@ public class AsignarDatos {
     public void establecerDatos() {
         JLrecibirnickname.setText(getNuevoJugador().getNickname());
         JLrecibirOro.setText(Integer.toString(getNuevoJugador().getCantidadOro()));
-
+        
         establecerComboBoxVehiculos(getNuevoJugador().getVehiculo()[0]);
         int posicion = JCBVehiculos.getSelectedIndex();
         JLpuntosVida.setText(Integer.toString(getNuevoJugador().getVehiculo()[posicion].getPuntosVida()));
@@ -48,7 +48,9 @@ public class AsignarDatos {
         JLataque.setText(Integer.toString(getNuevoJugador().getVehiculo()[posicion].getAtaque()));
         JLpunteria.setText(Integer.toString(getNuevoJugador().getVehiculo()[posicion].getPunteria()));
         JLdefensa.setText(Integer.toString(getNuevoJugador().getVehiculo()[posicion].getDefensa()));
+        JLrecibirOro.setText(Integer.toString(getNuevoJugador().getCantidadOro()));
 
+        
         estableerComboBoxArmas();
         establecerDatosArmas();
     }
@@ -78,4 +80,14 @@ public class AsignarDatos {
         JLdanio.setText(Integer.toString(getNuevoJugador().getVehiculo()[posicion].getArmas()[posicionArma].getNivelDanio()));
 
     }
+    public void establecerCmb(){
+        DefaultComboBoxModel model = (DefaultComboBoxModel) JCBVehiculos.getModel();
+        model.removeAllElements();
+        for (int i = 0; i < getNuevoJugador().getVehiculo().length; i++) {
+            model.addElement(getNuevoJugador().getVehiculo()[i].getNombre());
+            
+        }
+    }
+    
+    
 }

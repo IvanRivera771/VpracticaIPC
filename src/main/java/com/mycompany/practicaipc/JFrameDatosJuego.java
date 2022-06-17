@@ -24,7 +24,6 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
         nuevoJugador = jugador;
         asignar = new AsignarDatos();
         asignar.establecerDatos();
-
     }
 
     public static Jugador getNuevoJugador() {
@@ -50,7 +49,6 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         JCBVehiculos = new javax.swing.JComboBox<>();
@@ -61,7 +59,6 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         JLrecibirnickname = new javax.swing.JLabel();
-        JLVehiculo = new javax.swing.JLabel();
         JLrecibirOro = new javax.swing.JLabel();
         JLpuntosVida = new javax.swing.JLabel();
         JLpuntosPoder = new javax.swing.JLabel();
@@ -77,6 +74,7 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
         JLdanio = new javax.swing.JLabel();
         JLpunteriaA = new javax.swing.JLabel();
         JLvelocidad = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -94,8 +92,6 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
         jLabel5.setText("Cantidad de Oro:");
 
         jLabel2.setText("Jugador");
-
-        jLabel7.setText("Nombre Vehiculo: ");
 
         jLabel8.setText("Puntos de Vida:");
 
@@ -121,8 +117,6 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
 
         JLrecibirnickname.setText("jLabel6");
 
-        JLVehiculo.setText("jLabel6");
-
         JLrecibirOro.setText("jLabel6");
 
         JLpuntosVida.setText("jLabel6");
@@ -134,6 +128,11 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
         JLexperiencia.setText("jLabel6");
 
         cmbArmas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbArmas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbArmasActionPerformed(evt);
+            }
+        });
 
         JLataque.setText("jLabel6");
 
@@ -153,6 +152,8 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
 
         JLvelocidad.setText("Velocidad");
 
+        jLabel6.setText("Vehículo(s)");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -162,9 +163,6 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(JCBVehiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(jLabel2))
@@ -182,9 +180,7 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
                                 .addComponent(JLrecibirOro, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -194,7 +190,6 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(JLexperiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLnivel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JLVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLpuntosVida, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLpuntosPoder, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(JLataque, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -220,7 +215,11 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cmbArmas, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(cmbArmas, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JCBVehiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -240,13 +239,11 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
                     .addComponent(JLrecibirOro))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
-                .addGap(39, 39, 39)
-                .addComponent(JCBVehiculos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(JLVehiculo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(JCBVehiculos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(JLpuntosVida))
@@ -288,7 +285,7 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
                     .addComponent(JLdanio)
                     .addComponent(JLpunteriaA)
                     .addComponent(JLvelocidad))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jButton1.setText("Tienda");
@@ -340,19 +337,20 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_JCBVehiculosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        
-        JFrameTienda abrir = new JFrameTienda();
+
+        JFrameTienda2 abrir = new JFrameTienda2();
         abrir.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void cmbArmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbArmasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbArmasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JComboBox<String> JCBVehiculos;
-    public static javax.swing.JLabel JLVehiculo;
     public static javax.swing.JLabel JLataque;
     public static javax.swing.JLabel JLdanio;
     public static javax.swing.JLabel JLdefensa;
@@ -383,7 +381,7 @@ public class JFrameDatosJuego extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

@@ -10,10 +10,12 @@ public class arma1 extends Armas {
     
     public arma1(){
         
-        setNombreArma("Arma1");
+        setNombreArma("Cañon");
         setNivelDanio(5);
         setPunteria(3);
         setVelocidad(4);
+        
+        
     }
     
     
